@@ -7,13 +7,24 @@
   position: relative;
   padding: 40px 24px;
   min-height: 300px;
+  background: var(--purple-gradient);
 }
 
 .hero h1 {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--background-color);
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.hero p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--body-font-size-m);
 }
 
 .hero picture {
@@ -32,6 +43,7 @@
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 60px 32px;
+    min-height: 400px;
   }
 }

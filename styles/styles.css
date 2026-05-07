@@ -12,12 +12,15 @@
 
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --background-color: #0a0e27;
+  --light-color: #1a1f3a;
+  --dark-color: #151b35;
+  --text-color: #ffffff;
+  --link-color: #ff6b47;
+  --link-hover-color: #ff8566;
+  --accent-color: #ff6b47;
+  --purple-gradient: linear-gradient(135deg, #6b2db8 0%, #8b3fc9 50%, #ff6b47 100%);
+  --card-background: rgba(20, 25, 45, 0.8);
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -199,18 +202,20 @@ button.button:disabled {
 
 a.button.primary,
 button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 a.button.primary:hover,
 a.button.primary:focus-visible,
 button.button.primary:hover,
 button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  border-color: var(--link-hover-color);
+  background-color: var(--link-hover-color);
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 a.button.primary[aria-disabled="true"],
@@ -226,7 +231,7 @@ button.button.primary:disabled:focus-visible {
 
 a.button.secondary,
 button.button.secondary {
-  border-color: var(--text-color);
+  border-color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   color: var(--text-color);
 }
@@ -235,9 +240,10 @@ a.button.secondary:hover,
 a.button.secondary:focus-visible,
 button.button.secondary:hover,
 button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  border-color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 a.button.secondary[aria-disabled="true"],
@@ -322,4 +328,29 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.gradient {
+  background: var(--purple-gradient);
+  margin: 0;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+main .section.gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(107, 45, 184, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255, 107, 71, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+main .section.gradient > div {
+  position: relative;
+  z-index: 1;
 }
