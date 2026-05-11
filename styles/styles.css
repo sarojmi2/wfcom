@@ -76,7 +76,8 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background: var(--purple-gradient);
+  background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -305,7 +306,7 @@ main img {
 main > .section {
   margin: 0;
   padding: 40px 0;
-  background-color: var(--background-color);
+  background-color: transparent;
 }
 
 main > .section > div {
