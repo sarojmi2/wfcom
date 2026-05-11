@@ -146,7 +146,7 @@ pre {
 }
 
 main > div {
-  margin: 40px 16px;
+  margin: 0;
 }
 
 input,
@@ -303,7 +303,9 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: 40px 0;
+  background-color: var(--background-color);
 }
 
 main > .section > div {
@@ -326,7 +328,11 @@ main > .section:first-of-type {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
-  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
   padding: 40px 0;
 }
 
