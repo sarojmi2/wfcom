@@ -143,12 +143,13 @@
 .cards .cards-card-footer {
   margin-top: auto;
   padding-top: 12px;
+  padding-bottom: 12px;
   border-top: 1px solid #3a3a3a;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
-  min-height: 52px;
+  min-height: 64px;
   line-height: 1.2;
 }
 
