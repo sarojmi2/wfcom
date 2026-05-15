@@ -144,11 +144,12 @@
   margin-top: auto;
   padding-top: 12px;
   border-top: 1px solid #3a3a3a;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   min-height: 52px;
+  line-height: 1.2;
 }
 
 .cards .cards-card-owner {
@@ -156,8 +157,11 @@
   color: #b8b8b8;
   font-size: 14px;
   font-weight: 600;
-  flex: 1 1 auto;
   min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 
 .cards .cards-card-owner-placeholder {
@@ -169,20 +173,20 @@
   font-size: 16px;
   font-weight: 600;
   display: inline-flex;
-  flex: 0 0 auto;
-  margin-left: auto;
+  justify-self: end;
   max-width: 14ch;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   align-items: center;
+  line-height: 1.2;
 }
 
 .cards .cards-card-cta-placeholder {
   visibility: hidden;
   font-size: 16px;
   font-weight: 600;
-  margin-left: auto;
+  justify-self: end;
 }
 
 @media (width >= 900px) {
