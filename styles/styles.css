@@ -12,15 +12,15 @@
 
 :root {
   /* colors */
-  --background-color: #0a0e27;
-  --light-color: #1a1f3a;
-  --dark-color: #151b35;
-  --text-color: #ffffff;
-  --link-color: #ff6b47;
-  --link-hover-color: #ff8566;
-  --accent-color: #ff6b47;
-  --purple-gradient: linear-gradient(135deg, #6b2db8 0%, #8b3fc9 50%, #ff6b47 100%);
-  --card-background: rgba(20, 25, 45, 0.8);
+  --background-color: #1f1f1f;
+  --light-color: #2a2a2a;
+  --dark-color: #171717;
+  --text-color: #f5f5f5;
+  --link-color: #7eb6ff;
+  --link-hover-color: #9cc8ff;
+  --accent-color: #1473e6;
+  --purple-gradient: linear-gradient(160deg, #232323 0%, #2b2b2b 40%, #1f1f1f 100%);
+  --card-background: #262626;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -76,7 +76,10 @@
 body {
   display: none;
   margin: 0;
-  background: var(--purple-gradient);
+  background:
+    radial-gradient(circle at 10% 10%, rgb(255 255 255 / 5%) 0%, transparent 35%),
+    radial-gradient(circle at 80% 0%, rgb(20 115 230 / 16%) 0%, transparent 30%),
+    var(--purple-gradient);
   background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--body-font-family);
