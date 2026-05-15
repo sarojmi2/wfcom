@@ -10,11 +10,13 @@ function parseCardMeta(body) {
   let owner = '';
   let status = '';
   let ctaLink = null;
+  const contentCandidates = [];
 
-  paragraphs.forEach((p, index) => {
+  paragraphs.forEach((p) => {
     const text = p.textContent.trim();
     const lower = text.toLowerCase();
     const looksLikeCtaOnly = p.querySelector('a') && text.length <= 12;
+    const looksLikeTags = /[|,]/.test(text) && text.length < 120;
 
     if (lower.startsWith('status:')) {
       status = text.replace(/^status:\s*/i, '').trim();
@@ -35,33 +37,38 @@ function parseCardMeta(body) {
       return;
     }
 
-    if (!metadata.length && index > 0 && /[|,]/.test(text) && text.length < 100) {
+    if (!metadata.length && looksLikeTags) {
       metadata = text.split(/[|,]/).map((item) => item.trim()).filter(Boolean);
       p.remove();
       return;
     }
 
-    if (!owner && index > 0 && lower.startsWith('owner ')) {
+    if (!owner && lower.startsWith('owner ')) {
       owner = text.replace(/^owner\s*/i, '').trim();
       p.remove();
+      return;
     }
 
-    if (!description && !looksLikeCtaOnly) {
-      description = text;
+    if (!looksLikeCtaOnly && text) {
+      contentCandidates.push(text);
     }
   });
 
-  ctaLink = links.find((a) => /^(open|view|details|read)$/i.test(a.textContent.trim())) || links[0] || null;
+  ctaLink = links.find((a) => /^(open|view|details|read)$/i.test(a.textContent.trim())) || null;
 
-  if (!description) {
-    const fallback = paragraphs.find((p) => {
-      const text = p.textContent.trim().toLowerCase();
-      return !text.startsWith('status:') && !text.startsWith('owner:') && !text.startsWith('metadata:') && !text.startsWith('meta:');
-    });
-    description = fallback?.textContent?.trim() || '';
+  if (!title && contentCandidates.length) {
+    const inferredTitle = document.createElement('h3');
+    inferredTitle.className = 'cards-card-title';
+    inferredTitle.textContent = contentCandidates.shift();
+    body.prepend(inferredTitle);
   }
 
-  if (title) title.classList.add('cards-card-title');
+  if (contentCandidates.length) {
+    description = contentCandidates.find((text) => text.length > 55) || contentCandidates[0];
+  }
+
+  const resolvedTitle = body.querySelector('h1, h2, h3, h4, h5, h6');
+  if (resolvedTitle) resolvedTitle.classList.add('cards-card-title');
 
   return {
     description,

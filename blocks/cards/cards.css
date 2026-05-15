@@ -77,9 +77,9 @@
 }
 
 .cards .cards-card-icon img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cards .cards-card-status {
@@ -156,6 +156,8 @@
   color: #b8b8b8;
   font-size: 14px;
   font-weight: 600;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .cards .cards-card-owner-placeholder {
@@ -166,17 +168,21 @@
   color: #7eb6ff;
   font-size: 16px;
   font-weight: 600;
-  display: inline-block;
+  display: inline-flex;
+  flex: 0 0 auto;
+  margin-left: auto;
   max-width: 14ch;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  align-items: center;
 }
 
 .cards .cards-card-cta-placeholder {
   visibility: hidden;
   font-size: 16px;
   font-weight: 600;
+  margin-left: auto;
 }
 
 @media (width >= 900px) {
