@@ -5,7 +5,7 @@ function parseCardMeta(body) {
   const links = [...body.querySelectorAll('a')];
   const title = body.querySelector('h1, h2, h3, h4, h5, h6');
 
-  let description = paragraphs[0]?.textContent?.trim() || '';
+  let description = '';
   let metadata = [];
   let owner = '';
   let status = '';
@@ -14,6 +14,7 @@ function parseCardMeta(body) {
   paragraphs.forEach((p, index) => {
     const text = p.textContent.trim();
     const lower = text.toLowerCase();
+    const looksLikeCtaOnly = p.querySelector('a') && text.length <= 12;
 
     if (lower.startsWith('status:')) {
       status = text.replace(/^status:\s*/i, '').trim();
@@ -44,12 +45,20 @@ function parseCardMeta(body) {
       owner = text.replace(/^owner\s*/i, '').trim();
       p.remove();
     }
+
+    if (!description && !looksLikeCtaOnly) {
+      description = text;
+    }
   });
 
   ctaLink = links.find((a) => /^(open|view|details|read)$/i.test(a.textContent.trim())) || links[0] || null;
 
-  if (!description && paragraphs[0]) {
-    description = paragraphs[0].textContent.trim();
+  if (!description) {
+    const fallback = paragraphs.find((p) => {
+      const text = p.textContent.trim().toLowerCase();
+      return !text.startsWith('status:') && !text.startsWith('owner:') && !text.startsWith('metadata:') && !text.startsWith('meta:');
+    });
+    description = fallback?.textContent?.trim() || '';
   }
 
   if (title) title.classList.add('cards-card-title');
