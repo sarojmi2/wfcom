@@ -118,12 +118,24 @@ function decorateMetaUI(li, body) {
     ownerNode.className = 'cards-card-owner';
     ownerNode.textContent = `Owner · ${owner}`;
     footer.append(ownerNode);
+  } else {
+    const ownerPlaceholder = document.createElement('p');
+    ownerPlaceholder.className = 'cards-card-owner cards-card-owner-placeholder';
+    ownerPlaceholder.setAttribute('aria-hidden', 'true');
+    ownerPlaceholder.textContent = 'Owner ·';
+    footer.append(ownerPlaceholder);
   }
 
   if (ctaLink) {
     ctaLink.classList.add('cards-card-cta');
     ctaLink.textContent = `${ctaLink.textContent.trim() || 'Open'} ->`;
     footer.append(ctaLink);
+  } else {
+    const ctaPlaceholder = document.createElement('span');
+    ctaPlaceholder.className = 'cards-card-cta-placeholder';
+    ctaPlaceholder.setAttribute('aria-hidden', 'true');
+    ctaPlaceholder.textContent = 'Open ->';
+    footer.append(ctaPlaceholder);
   }
 
   const title = body.querySelector('.cards-card-title');
@@ -132,9 +144,13 @@ function decorateMetaUI(li, body) {
   }
   body.append(header);
   if (title) body.append(title);
-  if (description) body.append(desc);
+  if (!description) {
+    desc.textContent = 'No description provided.';
+    desc.classList.add('is-placeholder');
+  }
+  body.append(desc);
   if (metadata.length) body.append(metaWrap);
-  if (owner || ctaLink) body.append(footer);
+  body.append(footer);
 }
 
 export default function decorate(block) {
