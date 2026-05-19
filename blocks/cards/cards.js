@@ -1,5 +1,26 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
+// Deterministic color palette for meta chips — same tag always gets same color
+const CHIP_PALETTE = [
+  { bg: '#1a3a5c', color: '#7eb6ff', border: '#2a4a6c' }, // blue
+  { bg: '#2d1b4e', color: '#c084fc', border: '#3d2b5e' }, // purple
+  { bg: '#3d2800', color: '#f59e0b', border: '#4d3800' }, // amber
+  { bg: '#0d3333', color: '#2dd4bf', border: '#1d4343' }, // teal
+  { bg: '#3d1a2e', color: '#f472b6', border: '#4d2a3e' }, // pink
+  { bg: '#1a3320', color: '#4ade80', border: '#2a4330' }, // green
+  { bg: '#3d1f00', color: '#fb923c', border: '#4d2f00' }, // orange
+  { bg: '#1e1b4b', color: '#818cf8', border: '#2e2b5b' }, // indigo
+];
+
+function chipColor(text) {
+  let hash = 0;
+  for (let i = 0; i < text.length; i += 1) {
+    // eslint-disable-next-line no-bitwise
+    hash = (hash * 31 + text.charCodeAt(i)) & 0xffffffff;
+  }
+  return CHIP_PALETTE[Math.abs(hash) % CHIP_PALETTE.length];
+}
+
 function parseCardMeta(body) {
   const paragraphs = [...body.querySelectorAll(':scope > p')];
   const links = [...body.querySelectorAll('a')];
@@ -115,6 +136,10 @@ function decorateMetaUI(li, body) {
     const chip = document.createElement('span');
     chip.className = 'cards-card-chip';
     chip.textContent = item;
+    const { bg, color, border } = chipColor(item.toLowerCase().trim());
+    chip.style.setProperty('--chip-bg', bg);
+    chip.style.setProperty('--chip-color', color);
+    chip.style.setProperty('--chip-border', border);
     metaWrap.append(chip);
   });
 

@@ -100,6 +100,21 @@
   color: #77e38d;
 }
 
+.cards .cards-card-status-beta {
+  background-color: #3d2800;
+  color: #f59e0b;
+}
+
+.cards .cards-card-status-deprecated {
+  background-color: #3d1515;
+  color: #f87171;
+}
+
+.cards .cards-card-status-coming-soon {
+  background-color: #2d1b4e;
+  color: #c084fc;
+}
+
 .cards .cards-card-title {
   margin: 0;
   font-size: 1.75rem;
@@ -135,9 +150,9 @@
 }
 
 .cards .cards-card-chip {
-  background-color: #303030;
-  border: 1px solid #3b3b3b;
-  color: #d3d3d3;
+  background-color: var(--chip-bg, #303030);
+  border: 1px solid var(--chip-border, #3b3b3b);
+  color: var(--chip-color, #d3d3d3);
   border-radius: 8px;
   padding: 5px 10px;
   font-size: 14px;
