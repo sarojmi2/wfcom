@@ -1,4 +1,5 @@
-.cards > ul {
+.cards > ul,
+.cards.grouped .cards-group > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -8,18 +9,21 @@
 }
 
 @media (width >= 600px) {
-  .cards > ul {
+  .cards > ul,
+  .cards.grouped .cards-group > ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (width >= 1200px) {
-  .cards > ul {
+  .cards > ul,
+  .cards.grouped .cards-group > ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-.cards > ul > li {
+.cards > ul > li,
+.cards.grouped .cards-group > ul > li {
   border: 1px solid #3a3a3a;
   background:
     radial-gradient(100% 100% at 0% 0%, rgb(255 255 255 / 3%) 0%, transparent 50%),
@@ -28,7 +32,8 @@
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cards > ul > li:hover {
+.cards > ul > li:hover,
+.cards.grouped .cards-group > ul > li:hover {
   transform: translateY(-3px);
   border-color: #4b4b4b;
   box-shadow: 0 16px 32px rgb(0 0 0 / 28%);
@@ -200,31 +205,55 @@
   }
 }
 
-/* Grouped variation */
-.cards.grouped .cards-group {
-  padding-top: 32px;
-  border-top: 1px solid #3a3a3a;
-}
-
-.cards.grouped .cards-group:first-child {
-  padding-top: 0;
-  border-top: none;
-}
-
+/* Grouped variation — ungrouped sections are flat, no container */
 .cards.grouped .cards-group + .cards-group {
-  margin-top: 48px;
+  margin-top: 40px;
+}
+
+/* Bordered container only for sections that have a heading */
+.cards.grouped .cards-group.has-heading {
+  border: 1px solid rgb(126 182 255 / 22%);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgb(126 182 255 / 3%);
+}
+
+/* Gradient accent bar across the top */
+.cards.grouped .cards-group.has-heading::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, #7eb6ff 0%, #a78bfa 100%);
 }
 
 .cards.grouped .cards-group-heading {
-  margin: 0 0 24px;
-  font-size: 1.5rem;
+  margin: 0;
+  padding: 12px 20px;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: #f0f0f0;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c8dcff;
+  background: rgb(126 182 255 / 8%);
+  border-bottom: 1px solid rgb(126 182 255 / 15%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@media (width >= 900px) {
-  .cards.grouped .cards-group-heading {
-    font-size: 1.75rem;
-  }
+/* Glowing dot before the heading text */
+.cards.grouped .cards-group-heading::before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7eb6ff 0%, #a78bfa 100%);
+  box-shadow: 0 0 8px rgb(126 182 255 / 70%);
+}
+
+.cards.grouped .cards-group.has-heading > ul {
+  padding: 20px 24px 24px;
+  margin: 0;
 }

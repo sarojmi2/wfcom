@@ -227,6 +227,7 @@ function decorateGrouped(block) {
     const section = document.createElement('div');
     section.className = 'cards-group';
     if (group.heading) {
+      section.classList.add('has-heading');
       const h3 = document.createElement('h3');
       h3.className = 'cards-group-heading';
       h3.textContent = group.heading;
