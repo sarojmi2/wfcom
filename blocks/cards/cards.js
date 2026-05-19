@@ -160,10 +160,9 @@ function decorateMetaUI(li, body) {
   body.append(footer);
 }
 
-export default function decorate(block) {
-  /* change to ul, li */
+function buildCardList(rows) {
   const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
+  rows.forEach((row) => {
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
@@ -172,15 +171,14 @@ export default function decorate(block) {
     });
     ul.append(li);
   });
+
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
 
-  // Open all links in a new tab
   ul.querySelectorAll('a').forEach((a) => {
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
   });
 
-  // Wrap card image in the first link found in the card body
   ul.querySelectorAll('li').forEach((li) => {
     const imageDiv = li.querySelector('.cards-card-image');
     const firstLink = li.querySelector('.cards-card-body a');
@@ -201,5 +199,50 @@ export default function decorate(block) {
     if (body) decorateMetaUI(li, body);
   });
 
-  block.replaceChildren(ul);
+  return ul;
+}
+
+function decorateGrouped(block) {
+  const groups = [];
+  let current = null;
+
+  [...block.children].forEach((row) => {
+    const cells = [...row.children];
+    // A single-cell row with no picture is a group heading
+    const isHeading = cells.length === 1 && !cells[0].querySelector('picture');
+    if (isHeading) {
+      current = { heading: cells[0].textContent.trim(), rows: [] };
+      groups.push(current);
+    } else {
+      if (!current) {
+        current = { heading: null, rows: [] };
+        groups.push(current);
+      }
+      current.rows.push(row);
+    }
+  });
+
+  const fragment = document.createDocumentFragment();
+  groups.forEach((group) => {
+    const section = document.createElement('div');
+    section.className = 'cards-group';
+    if (group.heading) {
+      const h3 = document.createElement('h3');
+      h3.className = 'cards-group-heading';
+      h3.textContent = group.heading;
+      section.append(h3);
+    }
+    section.append(buildCardList(group.rows));
+    fragment.append(section);
+  });
+
+  block.replaceChildren(fragment);
+}
+
+export default function decorate(block) {
+  if (block.classList.contains('grouped')) {
+    decorateGrouped(block);
+  } else {
+    block.replaceChildren(buildCardList([...block.children]));
+  }
 }

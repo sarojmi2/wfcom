@@ -199,3 +199,32 @@
     font-size: 1.35rem;
   }
 }
+
+/* Grouped variation */
+.cards.grouped .cards-group {
+  padding-top: 32px;
+  border-top: 1px solid #3a3a3a;
+}
+
+.cards.grouped .cards-group:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.cards.grouped .cards-group + .cards-group {
+  margin-top: 48px;
+}
+
+.cards.grouped .cards-group-heading {
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  letter-spacing: -0.01em;
+}
+
+@media (width >= 900px) {
+  .cards.grouped .cards-group-heading {
+    font-size: 1.75rem;
+  }
+}
