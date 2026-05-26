@@ -1,0 +1,50 @@
+.dx-agents {
+  background: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08), 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.dx-agents .dx-agents-hdr {
+  background: #f7f7f5;
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dx-agents .dx-agents-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.dx-agents .dx-agents-sub {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.dx-agents .dx-agents-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 12px;
+}
+
+.dx-agents .dx-agent {
+  background: #f7f7f5;
+  color: #4a4a4a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 11px;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.dx-agents .dx-agent:hover {
+  background: #eaeae6;
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,157 @@
+.dx-categories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 599px) {
+  .dx-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .dx-categories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dx-categories .dx-cat-col {
+  border-radius: 10px;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08), 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.dx-categories .dx-cat-header {
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+.dx-categories .dx-cat-header.dx-cat-content {
+  background: #fff8ee;
+  color: #a05800;
+  border-color: rgba(200, 120, 20, 0.2);
+}
+
+.dx-categories .dx-cat-header.dx-cat-data {
+  background: #f0f6ff;
+  color: #0a59a8;
+  border-color: rgba(10, 89, 168, 0.18);
+}
+
+.dx-categories .dx-cat-header.dx-cat-journeys {
+  background: #f5f1ff;
+  color: #5c3d9e;
+  border-color: rgba(92, 61, 158, 0.18);
+}
+
+.dx-categories .dx-cat-products {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px;
+}
+
+.dx-categories .dx-product {
+  border-radius: 7px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  overflow: hidden;
+}
+
+.dx-categories .dx-product.dx-product-content:hover {
+  background: #fff8ee;
+  border-color: rgba(200, 120, 20, 0.2);
+}
+
+.dx-categories .dx-product.dx-product-data:hover {
+  background: #f0f6ff;
+  border-color: rgba(10, 89, 168, 0.18);
+}
+
+.dx-categories .dx-product.dx-product-journeys:hover {
+  background: #f5f1ff;
+  border-color: rgba(92, 61, 158, 0.18);
+}
+
+.dx-categories .dx-prod-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+}
+
+.dx-categories .dx-prod-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: currentcolor;
+}
+
+.dx-categories .dx-col-content .dx-prod-dot {
+  background: #a05800;
+}
+
+.dx-categories .dx-col-data .dx-prod-dot {
+  background: #0a59a8;
+}
+
+.dx-categories .dx-col-journeys .dx-prod-dot {
+  background: #5c3d9e;
+}
+
+.dx-categories .dx-prod-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+.dx-categories .dx-prod-arrow {
+  font-size: 10px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.dx-categories .dx-prod-versions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 2px 10px 7px 24px;
+}
+
+.dx-categories .dx-ver-tag {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid;
+}
+
+.dx-categories .dx-col-content .dx-ver-tag {
+  background: #fff0d4;
+  color: #a05800;
+  border-color: rgba(200, 120, 20, 0.25);
+}
+
+.dx-categories .dx-col-data .dx-ver-tag {
+  background: #e0edff;
+  color: #0a59a8;
+  border-color: rgba(10, 89, 168, 0.22);
+}
+
+.dx-categories .dx-col-journeys .dx-ver-tag {
+  background: #ece5ff;
+  color: #5c3d9e;
+  border-color: rgba(92, 61, 158, 0.22);
+}
