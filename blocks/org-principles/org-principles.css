@@ -1,0 +1,33 @@
+.org-principles {
+  background: #fcf6ee;
+  border: 1px dashed #d8cfc4;
+  border-radius: 14px;
+  padding: 18px 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.org-principles-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fa0f00;
+  margin-bottom: 12px;
+}
+
+.org-principles-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.org-pill {
+  font-size: 12.5px;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid #e7e0d8;
+  color: #1f1b18;
+  padding: 6px 13px;
+  border-radius: 100px;
+}

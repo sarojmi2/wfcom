@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<title>GDC EMERGE — EDS Authoring Content</title>
+<style>
+  body { font-family: Calibri, sans-serif; font-size: 11pt; margin: 36pt; }
+  h1 { font-size: 18pt; color: #FA0F00; }
+  h2 { font-size: 13pt; color: #1F1B18; border-bottom: 1pt solid #ccc; padding-bottom: 4pt; margin-top: 24pt; }
+  h3 { font-size: 11pt; color: #5C554F; margin-top: 16pt; }
+  p { margin: 4pt 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8pt 0 16pt; font-size: 10pt; }
+  td, th { border: 1pt solid #999; padding: 4pt 7pt; vertical-align: top; }
+  tr:first-child td { background: #FA0F00; color: #fff; font-weight: bold; }
+  .note { font-size: 9pt; color: #888; font-style: italic; margin-bottom: 6pt; }
+  .type-branch td:first-child { background: #7F77DD; color: #fff; font-weight: bold; }
+  .type-flat td:first-child { background: #534AB7; color: #fff; font-weight: bold; }
+  .type-group td:first-child { background: #f2ece3; font-weight: bold; }
+  .type-tile td:first-child { background: #fbf8f3; }
+  .type-data td:first-child { background: #e8f4ea; }
+  .type-header td { background: #1F1B18; color: #fff; font-weight: bold; }
+  .sep { border: none; border-top: 2pt solid #FA0F00; margin: 24pt 0; }
+</style>
+</head>
+<body>
+
+<h1>GDC EMERGE — EDS Authoring Content</h1>
+<p class="note">Open this file in Microsoft Word. Each coloured table is one EDS block. Copy each table into your Google Doc or SharePoint Word authoring document. A horizontal line marks a new section/section break.</p>
+
+<!-- ═══════════════════════════════════════════════════════ SECTION 1 -->
+<h2>Section 1 — Masthead Block</h2>
+<p class="note">Block name is in the first row (red header). Rows below define the content.</p>
+
+<table>
+  <tr><td colspan="2">org-masthead</td></tr>
+  <tr><td>Adobe · GDC EMERGE · Organisation Reference</td><td></td></tr>
+  <tr><td>GDC Leadership Structure</td><td></td></tr>
+  <tr><td>The EMERGE operating model reshapes GDC around single-point accountability and two-in-a-box regional co-ownership. This maps the full leadership team under Manoj Nagpal and expands each branch on demand. Tap any leader for their remit and strategic bet.</td><td></td></tr>
+  <tr><td>17 August 2026</td><td>Per Manoj Nagpal, Keerthi M, Santosh Naik &amp; Priyesh Nair org updates</td></tr>
+  <tr><td>Tip: click a branch to expand it, or use the buttons below to open or close everything at once. Every leader card is clickable.</td><td></td></tr>
+</table>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════════════════════════════ SECTION 2 -->
+<h2>Section 2 — Org Tree Block</h2>
+<p class="note">
+  All rows go in one single table. Row types are set by col 0: <b>branch</b>, <b>tile</b>, <b>group</b>, <b>flat</b>, <b>data</b>.<br>
+  Column order: col0=type | col1=name | col2=tag | col3=role | col4=count | col5=colour | col6=(blank)<br>
+  For <b>data</b> rows: col0=data | col1=key | col2=category | col3=title | col4=role | col5=description | col6=strategic bet
+</p>
+
+<table>
+  <tr><td colspan="7">org-tree</td></tr>
+
+  <!-- ── Header row: top leader -->
+  <tr class="type-header"><td>Manoj Nagpal</td><td>GDC Leadership</td><td></td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Branch: Keerthi M -->
+  <tr class="type-branch"><td>branch</td><td>Keerthi M</td><td>CXO Product</td><td>CXO Product Competencies</td><td>5 leads</td><td>#7F77DD</td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Shirish Halapeth</td><td>Content &amp; Brand Visibility</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Suryanarayana Kothapalli</td><td>Analytics &amp; Journeys</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Vinit Kumar Singh</td><td>CSC &amp; Workfront</td><td>me</td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Pratul Chakravarty</td><td>AEP &amp; RTCDP</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Shiby Lazar</td><td>Enablement</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Branch: Priyesh Nair (EMEA) -->
+  <tr class="type-branch"><td>branch</td><td>Priyesh Nair</td><td>EMEA</td><td>EMEA delivery · two-in-a-box</td><td>4 sub-regions</td><td>#378ADD</td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Balakrishnan Iyer</td><td>UKI</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Jinu Philip</td><td>MEA</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Priyesh Nair</td><td>CEUR</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Jayamurugan Natarajan</td><td>WEUR</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Branch: Mandeep Singh (JAPAC) -->
+  <tr class="type-branch"><td>branch</td><td>Mandeep Singh</td><td>JAPAC</td><td>JAPAC delivery · two-in-a-box</td><td>6 leads</td><td>#1D9E75</td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Varun Tiwari</td><td>India</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Prasoon Shukla</td><td>ANZ</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Manu Malhotra</td><td>Korea &amp; Greater China</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Sandeep Kulkarni</td><td>SEA</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Madhan Kumar Sugumar</td><td>Japan</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Manjeet Singh Nagi</td><td>Delivery Standards &amp; Tech Governance</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Branch: Santosh Naik -->
+  <tr class="type-branch"><td>branch</td><td>Santosh Naik</td><td>Cross-Product</td><td>Cross-Product Competencies</td><td>7 leads</td><td>#639922</td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Amardeep Kohli</td><td>Field Engineering</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Arun Rajkumar</td><td>Front-End Engineering</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Hemant Bhagia</td><td>User Experience &amp; Design</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Kirti Rawat</td><td>C&amp;P Services</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Mubassar Uruj</td><td>Quality &amp; Performance Eng.</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Punya Sekhar</td><td>Strategy &amp; Business Consulting</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Jitesh Srivastava</td><td>Content &amp; Product Strategy</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Branch: Jupesh Karayil -->
+  <tr class="type-branch"><td>branch</td><td>Jupesh Karayil</td><td>Innovation &amp; Commerce</td><td>Innovation Hub &amp; Industry Solutions · Commerce</td><td>2 teams</td><td>#D85A30</td><td></td></tr>
+  <tr class="type-group"><td>group</td><td>Innovation Hub &amp; Industry Solutions · new CoE</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Innovation Hub &amp; Industry Solutions</td><td>DA CoE transitions in · vertical solutions factory</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-group"><td>group</td><td>Commerce · leadership team</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Kiran Balachandran</td><td>Adobe Commerce</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Deepak Moktan</td><td>Adobe Commerce</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Om Deshpande</td><td>Adobe Commerce</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Kamendra Kumar Rao</td><td>Adobe Commerce</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Branch: Ganapathy Subramani (AI CoE) -->
+  <tr class="type-branch"><td>branch</td><td>Ganapathy Subramani</td><td>AI CoE</td><td>AI Council &amp; AI Centre of Excellence</td><td>3 pillars</td><td>#BA7517</td><td></td></tr>
+  <tr class="type-group"><td>group</td><td>AI Engineering</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Shruthi Chinnasamy</td><td>AI Engineering · ADAPT platform</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-group"><td>group</td><td>AI Architecture</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Rajit Badgandi</td><td>AI Architecture · ADAPT</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Rohit Kukreja</td><td>AI Architecture · ADAPT</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-group"><td>group</td><td>AI Practice</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Aseem Jain</td><td>AI Practice · AI-native adoption</td><td></td><td></td><td></td><td></td></tr>
+  <tr class="type-tile"><td>tile</td><td>Tina Dilip Soni</td><td>AI Practice · AI-native adoption</td><td></td><td></td><td></td><td></td></tr>
+
+  <!-- ── Flat branches -->
+  <tr class="type-flat"><td>flat</td><td>Narendra Gorla</td><td>Architecture</td><td>Enterprise Architecture · Value by Design</td><td>#534AB7</td><td></td><td></td></tr>
+  <tr class="type-flat"><td>flat</td><td>Prithwiraj Gupta</td><td>Strategy &amp; Ops</td><td>Strategy &amp; Operations</td><td>#0F6E56</td><td></td><td></td></tr>
+  <tr class="type-flat"><td>flat</td><td>NA delivery</td><td></td><td>Verticals report to Manoj · leader search ongoing</td><td>#888780</td><td></td><td></td></tr>
+
+  <!-- ══ Modal data rows ══════════════════════════════════════════════ -->
+  <tr class="type-data"><td>data</td><td>emerge</td><td>Transformation framework</td><td>EMERGE</td><td>Project Butterfly · GDC transformation</td><td>EMERGE repositions GDC as an AI-native, outcome-driven organisation that accelerates measurable customer value. It marks the shift from utilisation-focused delivery to owning customer outcomes, built on single-point accountability, two-in-a-box regional co-ownership, innovation at scale, and a lean, delayered structure.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>manoj-nagpal</td><td>GDC leadership</td><td>Manoj Nagpal</td><td>GDC leadership</td><td>Leads GDC through the EMERGE journey. The leaders below report to Manoj and form the GDC leadership team, spanning regional delivery, product and cross-product competencies, AI, innovation, enterprise architecture, and strategy and operations.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>keerthi-m</td><td>Competencies</td><td>Keerthi M</td><td>CXO Product Competencies</td><td>Leads CXO Product Competencies at GDC, building deep expertise in Customer Experience Orchestration across the Adobe Experience Cloud portfolio.</td><td>Strategic bet: define a Standardised Customer Value Framework and instil a customer value mindset across GDC.</td></tr>
+  <tr class="type-data"><td>data</td><td>shirish-halapeth</td><td>CXO Product Competencies</td><td>Shirish Halapeth</td><td>Content &amp; Brand Visibility</td><td>Leads the Content and Brand Visibility product competency within Keerthi's CXO Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>suryanarayana-kothapalli</td><td>CXO Product Competencies</td><td>Suryanarayana Kothapalli</td><td>Analytics &amp; Journeys</td><td>Leads the Analytics and Journeys product competency within Keerthi's CXO Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>vinit-kumar-singh</td><td>CXO Product Competencies</td><td>Vinit Kumar Singh</td><td>CSC &amp; Workfront</td><td>Leads the Content Supply Chain and Workfront product competency within Keerthi's CXO Product Competencies organisation — building GDC capability hubs across the content supply chain and marketing work management.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>pratul-chakravarty</td><td>CXO Product Competencies</td><td>Pratul Chakravarty</td><td>AEP &amp; RTCDP</td><td>Leads the Adobe Experience Platform and Real-Time CDP product competency within Keerthi's CXO Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>shiby-lazar</td><td>CXO Product Competencies</td><td>Shiby Lazar</td><td>Enablement</td><td>Leads Enablement within Keerthi's CXO Product Competencies organisation, elevating workforce capability across the portfolio.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>priyesh-nair</td><td>EMEA delivery</td><td>Priyesh Nair</td><td>EMEA delivery lead · CEUR</td><td>Leads overall GDC EMEA delivery and, through the two-in-a-box model, co-owns regional business outcomes with regional leadership. Priorities: co-own regional revenue growth, accelerate customer outcomes, drive AI-native productivity across every program, scale Integrated Services, and deliver against Strategic Partner commitments. Also leads the CEUR sub-region.</td><td>Focus: Customer Success across ACS commercial offerings, including Custom Services and Integrated Services.</td></tr>
+  <tr class="type-data"><td>data</td><td>balakrishnan-iyer</td><td>EMEA delivery</td><td>Balakrishnan Iyer</td><td>EMEA delivery · UKI</td><td>Leads GDC delivery for the UKI sub-region within EMEA, driving Customer Success across ACS commercial offerings.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>jinu-philip</td><td>EMEA delivery</td><td>Jinu Philip</td><td>EMEA delivery · MEA</td><td>Leads GDC delivery for the MEA sub-region within EMEA, driving Customer Success across ACS commercial offerings.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>jayamurugan-natarajan</td><td>EMEA delivery</td><td>Jayamurugan Natarajan</td><td>EMEA delivery · WEUR</td><td>Leads GDC delivery for the WEUR sub-region within EMEA, driving Customer Success across ACS commercial offerings.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>mandeep-singh</td><td>JAPAC delivery</td><td>Mandeep Singh</td><td>JAPAC delivery lead · two-in-a-box</td><td>Leads GDC JAPAC delivery, co-owning end-to-end customer outcomes through the two-in-a-box operating model with embedded regional co-ownership. Priorities: co-own regional revenue growth, accelerate customer outcomes, drive AI-native productivity across every program, scale Integrated Services, and deliver against Strategic Partner commitments.</td><td>Drives the Regional Co-Ownership Delivery big bet — institutionalising joint GDC–Regional accountability and SPP-native delivery governance for consistent outcomes at scale.</td></tr>
+  <tr class="type-data"><td>data</td><td>varun-tiwari</td><td>JAPAC delivery</td><td>Varun Tiwari</td><td>JAPAC delivery · India</td><td>Leads GDC delivery for India within JAPAC, driving regional co-ownership and customer outcomes.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>prasoon-shukla</td><td>JAPAC delivery</td><td>Prasoon Shukla</td><td>JAPAC delivery · ANZ</td><td>Leads GDC delivery for Australia and New Zealand within JAPAC, driving regional co-ownership and customer outcomes.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>manu-malhotra</td><td>JAPAC delivery</td><td>Manu Malhotra</td><td>JAPAC delivery · Korea &amp; Greater China</td><td>Leads GDC delivery for Korea and Greater China within JAPAC, driving regional co-ownership and customer outcomes.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>sandeep-kulkarni</td><td>JAPAC delivery</td><td>Sandeep Kulkarni</td><td>JAPAC delivery · SEA</td><td>Leads GDC delivery for South East Asia within JAPAC, driving regional co-ownership and customer outcomes.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>madhan-kumar-sugumar</td><td>JAPAC delivery</td><td>Madhan Kumar Sugumar</td><td>JAPAC delivery · Japan</td><td>Leads GDC delivery for Japan within JAPAC, driving regional co-ownership and customer outcomes.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>manjeet-singh-nagi</td><td>JAPAC delivery</td><td>Manjeet Singh Nagi</td><td>Delivery Standards &amp; Tech Governance</td><td>Leads Delivery Standards and Technical Governance within Mandeep's JAPAC delivery organisation, aligning capability with the key pillars of EMERGE.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>santosh-naik</td><td>Competencies</td><td>Santosh Naik</td><td>Cross-Product Competencies</td><td>Leads Cross-Product Competencies at GDC, bringing together horizontal capabilities that span the Adobe portfolio to enable AI-native, high-quality delivery. Partners closely with Keerthi and Jupesh.</td><td>Also owns EMERGE's people and skills transformation, advancing role excellence and partnering on key people initiatives.</td></tr>
+  <tr class="type-data"><td>data</td><td>amardeep-kohli</td><td>Cross-Product Competencies</td><td>Amardeep Kohli</td><td>Field Engineering</td><td>Leads Field Engineering within Santosh's Cross-Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>arun-rajkumar</td><td>Cross-Product Competencies</td><td>Arun Rajkumar</td><td>Front-End Engineering</td><td>Leads Front-End Engineering within Santosh's Cross-Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>hemant-bhagia</td><td>Cross-Product Competencies</td><td>Hemant Bhagia</td><td>User Experience &amp; Design</td><td>Leads User Experience and Design within Santosh's Cross-Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>kirti-rawat</td><td>Cross-Product Competencies</td><td>Kirti Rawat</td><td>C&amp;P Services</td><td>Leads C&amp;P Services within Santosh's Cross-Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>mubassar-uruj</td><td>Cross-Product Competencies</td><td>Mubassar Uruj</td><td>Quality &amp; Performance Engineering</td><td>Leads Quality and Performance Engineering, newly welcomed into Cross-Product Competencies — strengthening the end-to-end ability to design, build, validate and deliver reliable, high-performing experiences.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>punya-sekhar</td><td>Cross-Product Competencies</td><td>Punya Sekhar</td><td>Strategy &amp; Business Consulting</td><td>Leads Strategy and Business Consulting within Santosh's Cross-Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>jitesh-srivastava</td><td>Cross-Product Competencies</td><td>Jitesh Srivastava</td><td>Content &amp; Product Strategy</td><td>Leads Content and Product Strategy within Santosh's Cross-Product Competencies organisation.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>jupesh-karayil</td><td>Innovation &amp; Commerce</td><td>Jupesh Karayil</td><td>Innovation Hub &amp; Industry Solutions · Commerce</td><td>Establishes Innovation Hub &amp; Industry Solutions as a dedicated centre of excellence, and continues to lead Commerce. Two teams report directly to him: the new Innovation Hub CoE and the Adobe Commerce leadership team.</td><td>Owns the Innovation Hub – Vertical Industry Solutions big bet — partnering with Sales and Delivery to create a Solution IP Factory of accelerators, playbooks and GTM packages.</td></tr>
+  <tr class="type-data"><td>data</td><td>innovation-hub-industry-solutions</td><td>Innovation Hub &amp; Industry Solutions</td><td>Innovation Hub &amp; Industry Solutions</td><td>New centre of excellence</td><td>A dedicated CoE reporting to Jupesh Karayil. The existing Digital Accelerator (DA) CoE team transitions into this team with an expanded charter: accelerate customer value through a vertical industry solutions factory delivering reusable IP, industry solutions, accelerators, playbooks and GTM packages.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>kiran-balachandran</td><td>Commerce</td><td>Kiran Balachandran</td><td>Adobe Commerce leadership</td><td>Part of the Adobe Commerce leadership team reporting to Jupesh Karayil, building deep product competencies and driving Agentic AI-native delivery across Adobe Commerce products.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>deepak-moktan</td><td>Commerce</td><td>Deepak Moktan</td><td>Adobe Commerce leadership</td><td>Part of the Adobe Commerce leadership team reporting to Jupesh Karayil, building deep product competencies and driving Agentic AI-native delivery across Adobe Commerce products.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>om-deshpande</td><td>Commerce</td><td>Om Deshpande</td><td>Adobe Commerce leadership</td><td>Part of the Adobe Commerce leadership team reporting to Jupesh Karayil, building deep product competencies and driving Agentic AI-native delivery across Adobe Commerce products.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>kamendra-kumar-rao</td><td>Commerce</td><td>Kamendra Kumar Rao</td><td>Adobe Commerce leadership</td><td>Part of the Adobe Commerce leadership team reporting to Jupesh Karayil, building deep product competencies and driving Agentic AI-native delivery across Adobe Commerce products.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>ganapathy-subramani</td><td>AI &amp; innovation</td><td>Ganapathy Subramani</td><td>AI Council &amp; AI Centre of Excellence</td><td>Establishes the AI Council and AI Centre of Excellence at GDC. Its three pillars — AI Engineering, AI Architecture, and AI Practice — form a unified operating model built on reusable platforms, common standards, and scalable AI capabilities.</td><td>Owns the AI-native Delivery and Agentic AI customer solutions big bet — driving AI-native delivery, governance standards, and an AI asset library and tools reusable across ACS for AI-led productivity.</td></tr>
+  <tr class="type-data"><td>data</td><td>shruthi-chinnasamy</td><td>AI CoE · AI Engineering</td><td>Shruthi Chinnasamy</td><td>Owner, AI Engineering</td><td>Owns AI Engineering and leads development of the ADAPT Agentic AI platform, one of the key pillars of ACS Nexus.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>rajit-badgandi</td><td>AI CoE · AI Architecture</td><td>Rajit Badgandi</td><td>Owner, AI Architecture</td><td>Co-owns AI Architecture, leading architecture for the ADAPT platform.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>rohit-kukreja</td><td>AI CoE · AI Architecture</td><td>Rohit Kukreja</td><td>Owner, AI Architecture</td><td>Co-owns AI Architecture, leading architecture for the ADAPT platform.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>aseem-jain</td><td>AI CoE · AI Practice</td><td>Aseem Jain</td><td>Owner, AI Practice</td><td>Co-owns AI Practice, driving AI-native adoption across GDC, enabling colleagues for the AI-native journey and creating the feedback loop into the AI Engineering and AI Architecture teams.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>tina-dilip-soni</td><td>AI CoE · AI Practice</td><td>Tina Dilip Soni</td><td>Owner, AI Practice</td><td>Co-owns AI Practice, driving AI-native adoption across GDC, enabling colleagues for the AI-native journey and creating the feedback loop into the AI Engineering and AI Architecture teams.</td><td></td></tr>
+  <tr class="type-data"><td>data</td><td>narendra-gorla</td><td>Enterprise architecture</td><td>Narendra Gorla</td><td>Enterprise Architecture · Value by Design</td><td>Leads Enterprise Architecture at GDC, evolving it into a dedicated capability focused on Value by Design — helping customers realise measurable business value by combining deep industry expertise, Adobe technology leadership and AI-native architecture. Five focus areas: Customer Value, Strategic Initiatives, Industry &amp; Technology Capability, Capability at Scale, and AI-Native Efficiency.</td><td>Partners with Keerthi and Jupesh through the Workfront &amp; CSC and Digital Accelerator CoE transitions.</td></tr>
+  <tr class="type-data"><td>data</td><td>prithwiraj-gupta</td><td>Strategy &amp; operations</td><td>Prithwiraj Gupta</td><td>Strategy &amp; Operations</td><td>Leads Strategy and Operations, driving workforce strategy, governance, execution discipline and the strategic partner program. Also drives Program Governance of Integrated Services in partnership with Global IS Leadership.</td><td>Owns the Strategic Partner Model &amp; Workforce Re-alignment big bet — designing an optimal workforce strategy leveraging SPP to scale IS and CS.</td></tr>
+  <tr class="type-data"><td>data</td><td>na-delivery</td><td>Regional delivery</td><td>NA delivery</td><td>North America</td><td>While the search for a NA Delivery Leader continues, the NA vertical leaders report directly to Manoj.</td><td></td></tr>
+</table>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════════════════════════════ SECTION 3 -->
+<h2>Section 3 — Operating Principles Block</h2>
+<p class="note">First row = block name. Second row = section label. Third row = one pill per cell.</p>
+
+<table>
+  <tr><td colspan="8">org-principles</td></tr>
+  <tr><td colspan="8">EMERGE · Operating principles</td></tr>
+  <tr>
+    <td>AI-native by default</td>
+    <td>Single point of accountability</td>
+    <td>Two-in-a-box co-ownership</td>
+    <td>Own outcomes, not utilisation</td>
+    <td>Capability hubs</td>
+    <td>Solution IP — reuse, not rebuild</td>
+    <td>Lean, delayered, faster decisions</td>
+    <td></td>
+  </tr>
+</table>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════════════════════════════ FOOTER -->
+<h2>Footer (default content — plain paragraph, no block)</h2>
+<p>GDC EMERGE Organisation Reference. Structure per the 17 August 2026 organisation updates from Manoj Nagpal (GDC), Keerthi M (CXO Product Competencies), Jupesh Karayil (Innovation Hub &amp; Industry Solutions), Santosh Naik (Cross-Product Competencies), Priyesh Nair (EMEA delivery) and Mandeep Singh (JAPAC delivery). Commerce now reports directly to Jupesh alongside the new Innovation Hub CoE; Priyesh appears both as EMEA delivery lead and CEUR sub-region lead, reflecting the announcements. Internal reference — not an official Adobe org document.</p>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════════════════════════════ METADATA -->
+<h2>Metadata Block (end of document)</h2>
+<table>
+  <tr><td colspan="2">Metadata</td></tr>
+  <tr><td>Title</td><td>GDC EMERGE Organisation — Leadership Structure</td></tr>
+  <tr><td>Description</td><td>GDC EMERGE operating model leadership reference. Maps the full leadership team under Manoj Nagpal including all direct reports, regional delivery leads, product competencies, AI CoE, and cross-cutting capabilities.</td></tr>
+</table>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════════════════════════════ REFERENCE -->
+<h2>Row-type reference for org-tree</h2>
+<table>
+  <tr><td><b>Row type</b></td><td><b>col 0</b></td><td><b>col 1</b></td><td><b>col 2</b></td><td><b>col 3</b></td><td><b>col 4</b></td><td><b>col 5</b></td><td><b>col 6</b></td></tr>
+  <tr><td>Header</td><td>leader name</td><td>leader role</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>branch</td><td>branch</td><td>leader name</td><td>tag chip</td><td>role subtitle</td><td>count label</td><td>hex colour</td><td></td></tr>
+  <tr><td>group</td><td>group</td><td>group label text</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>tile</td><td>tile</td><td>person name</td><td>role</td><td>me (optional — highlights tile)</td><td></td><td></td><td></td></tr>
+  <tr><td>flat</td><td>flat</td><td>leader name</td><td>tag chip</td><td>role subtitle</td><td>hex colour</td><td></td><td></td></tr>
+  <tr><td>data</td><td>data</td><td>slug key</td><td>category label</td><td>display title</td><td>role line</td><td>description text</td><td>strategic bet (optional)</td></tr>
+</table>
+
+</body>
+</html>
